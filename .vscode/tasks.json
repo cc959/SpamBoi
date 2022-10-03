@@ -1,13 +1,6 @@
 {
 	"tasks": [
 		{
-			"label": "Build",
-			"dependsOn": [
-				"Make",
-				"Copy resources"
-			]
-		},
-		{
 			"type": "shell",
 			"label": "Make",
 			"command": "make",
@@ -21,19 +14,6 @@
 				"kind": "build",
 				"isDefault": true
 			},
-		},
-		{
-			"label": "Copy resources",
-			"command": "rsync",
-			"args": [
-				"--archive",
-				"--delete",
-				"./res",
-				"./Build"
-			],
-			"options": {
-				"cwd": "${workspaceFolder}"
-			}
 		}
 	],
 	"version": "2.0.0"
